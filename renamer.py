@@ -49,7 +49,10 @@ def blindrename(folder):
 				# This ensures that there is a 1 index for files with no extension
 				base.append("")
 				cloaked_name = "".join(random.choices(chars, k = 5))
-				new_name = path.join(folder, cloaked_name + "." + base[1])
+				if base[1]:
+					new_name = path.join(folder, cloaked_name + "." + base[1])
+				if not base[1]:
+					new_name = path.join(folder, cloaked_name)
 				print(old_name, " to ", new_name)
 				writer.writerow([old_name, new_name])
 				os.rename(old_name, new_name)
