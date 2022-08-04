@@ -80,7 +80,7 @@ def unblind(folder):
 	if len(contents) == 0:
 		exit("Looks like that folder is empty?")
 
-	# Avoid double renaming.
+	# Needs a keyfile to function.
 	if not path.exists(os.path.join(folder, "keyfile.csv")):
 		exit("No keyfile?")
 
