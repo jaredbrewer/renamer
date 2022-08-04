@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import os, csv, string, random
+import os, csv, string, random, sys
 from os import path
 
 def blindrename(folder):
